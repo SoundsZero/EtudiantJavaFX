@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="maintstage" fx:id="mainAnchor" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #D3F5F5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <MenuBar layoutX="129.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Etudiant">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ongletAjoutEtudiant" text="Aj. étudiant" />
+                  <MenuItem mnemonicParsing="false" text="Liste étudiant" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tableView" layoutX="3.0" layoutY="32.0" prefHeight="278.0" prefWidth="593.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <columns>
+            <TableColumn fx:id="tblID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="tblPrenom" prefWidth="75.0" text="Prénom" />
+            <TableColumn fx:id="tblNom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="tblDdn" prefWidth="75.0" text="Date de naissance" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+   </children>
+</AnchorPane>

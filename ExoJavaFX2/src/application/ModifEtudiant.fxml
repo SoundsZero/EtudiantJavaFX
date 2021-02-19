@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ongletModif" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #009782;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerModifEtudiant">
+   <children>
+      <MenuBar layoutX="11.0" layoutY="8.0" prefHeight="32.0" prefWidth="294.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Etudiant">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ongletAjoutEtudiant" text="Aj. étudiant" />
+                  <MenuItem mnemonicParsing="false" onAction="#ongletMenuPrinc" text="Liste étudiant" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="lblPrenom" layoutX="48.0" layoutY="124.0" text="Prenom" />
+      <Label fx:id="lblNom" layoutX="58.0" layoutY="230.0" text="Nom" />
+      <TextField fx:id="txtPrenom" editable="false" layoutX="190.0" layoutY="119.0" AnchorPane.leftAnchor="130.0" />
+      <TextField fx:id="txtNom" editable="false" layoutX="134.0" layoutY="225.0" AnchorPane.leftAnchor="130.0" />
+      <DatePicker fx:id="dateSelector" editable="false" layoutX="113.0" layoutY="354.0" visible="false" />
+      <ImageView fx:id="imgView" fitHeight="260.0" fitWidth="220.0" layoutX="616.0" layoutY="99.0" pickOnBounds="true" AnchorPane.rightAnchor="70.0" />
+      <Label fx:id="affichDate" layoutX="164.0" layoutY="326.0" text="Date de naissance" />
+      <Button layoutX="680.0" layoutY="422.0" mnemonicParsing="false" onAction="#ajoutPhoto" text="Parcourir" AnchorPane.bottomAnchor="140.0" />
+      <TextField fx:id="pathPhoto" layoutX="623.0" layoutY="362.0" prefHeight="21.0" prefWidth="200.0" AnchorPane.bottomAnchor="200.0" />
+      <Pane layoutX="410.0" layoutY="42.0" prefHeight="561.0" prefWidth="100.0" style="-fx-background-color: #d01317;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Button fx:id="btnModifier" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#enregisterEtu" text="Modfier" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

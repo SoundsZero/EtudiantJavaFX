@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ongletAjout" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #D3F5F5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerAjout">
+   <children>
+      <MenuBar layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Etudiant">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Aj. étudiant" />
+                  <MenuItem mnemonicParsing="false" onAction="#ongletMenuPrinc" text="Liste étudiant" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="lblPrenom" layoutX="54.0" layoutY="85.0" text="Prenom" />
+      <Label layoutX="64.0" layoutY="195.0" text="Nom" />
+      <TextField fx:id="txtPrenom" layoutX="134.0" layoutY="80.0" AnchorPane.leftAnchor="130.0" />
+      <TextField fx:id="txtNom" layoutX="126.0" layoutY="190.0" AnchorPane.leftAnchor="130.0" />
+      <DatePicker fx:id="dateSelector" layoutX="119.0" layoutY="292.0" AnchorPane.leftAnchor="130.0" />
+      <ImageView fx:id="imgView" fitHeight="260.0" fitWidth="220.0" layoutX="603.0" layoutY="85.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../Liverpool.jpg" />
+         </image></ImageView>
+      <Button fx:id="btnParcour" layoutX="673.0" layoutY="407.0" mnemonicParsing="false" onAction="#ajoutPhoto" text="Parcourir" AnchorPane.bottomAnchor="140.0" />
+      <TextField fx:id="pathPhoto" layoutX="613.0" layoutY="352.0" prefHeight="21.0" prefWidth="200.0" AnchorPane.bottomAnchor="200.0" />
+      <Pane layoutX="400.0" layoutY="32.0" prefHeight="561.0" prefWidth="100.0" style="-fx-background-color: #009782;" AnchorPane.bottomAnchor="-2.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <Button fx:id="btnEtuEnregistrer" layoutX="4.0" layoutY="474.0" mnemonicParsing="false" onAction="#enregisterEtu" text="Enregistrer" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
